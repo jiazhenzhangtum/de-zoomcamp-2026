@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.csv
+*.parquet
+ny_taxi_postgres_data/
+__pycache__/
+.venv/
+venv/

@@ -1,0 +1,23 @@
+services:
+  kestra:
+    image: kestra/kestra:latest
+    container_name: kestra
+    command: server local
+    environment:
+      KESTRA_CONFIGURATION: |
+        kestra:
+          server:
+            basic-auth:
+              enabled: false
+    volumes:
+      - kestra-data:/app/storage
+    ports:
+      - "8080:8080"
+    networks:
+      - kestra-net
+
+volumes:
+  kestra-data:
+
+networks:
+  kestra-net:
